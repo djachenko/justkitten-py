@@ -7,7 +7,7 @@ packages = ["src/justkitten"]
 
 [project]
 name = "justkitten"
-version = "0.7.0"
+version = "0.8.0"
 description = "Utilities for the Justin project"
 readme = "README.md"
 license = "MIT"

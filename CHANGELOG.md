@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.8.0 (2026-10-20)
+
+### Refactoring
+
+- Rename justin_utils to justkitten
+  ([`a8e47d6`](https://github.com/djachenko/justkitten-py/commit/a8e47d62781bf00794c6f9472ec8a7fca5c0cc47))
+
+
 ## v0.7.0 (2026-10-15)
 
 ### Features
