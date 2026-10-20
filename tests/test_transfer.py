@@ -1,6 +1,6 @@
 import pytest
 
-from justin_utils.transfer import TransferSpeedMeter
+from justkitten.transfer import TransferSpeedMeter
 
 
 class TestTransferSpeedMeter:

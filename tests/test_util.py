@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 import pytest
 
-from justin_utils.util import parse_date
+from justkitten.util import parse_date
 
 
 def _today_year() -> int:
@@ -27,7 +27,7 @@ class TestParseDate:
         (99, 1999),
     ])
     def test_2_digit_year(self, two_digit_year, expected_year):
-        with patch("justin_utils.util.date") as mock_date:
+        with patch("justkitten.util.date") as mock_date:
             mock_date.today.return_value = date(2026, 6, 27)
             mock_date.side_effect = lambda *a, **kw: date(*a, **kw)
 

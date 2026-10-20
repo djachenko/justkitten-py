@@ -1,4 +1,4 @@
-# justin_utils
+# justkitten
 
 Shared utility library for the Justin Python ecosystem. Provides reusable building blocks for filesystem operations, CLI tooling, functional sequences, EXIF handling, and more — designed to be installed as a lightweight dependency across multiple projects.
 
@@ -9,14 +9,14 @@ Python 3.11+
 ## Installation
 
 ```bash
-pip install justin_utils
+pip install justkitten
 ```
 
 To install only specific modules and their dependencies, use extras:
 
 ```bash
-pip install "justin_utils[filesystem]"
-pip install "justin_utils[exif,sources]"
+pip install "justkitten[filesystem]"
+pip install "justkitten[exif,sources]"
 ```
 
 For development:
@@ -85,7 +85,7 @@ Lazy `Sequence` wrapper with a LINQ-style API: `filter`, `map`, `flat_map`, `gro
 Photo source abstraction: groups raw files (NEF, RAF, ARW) with their XMP sidecar metadata, and JPEG/TIFF/DNG/HEIC files with embedded metadata. `parse_sources` returns a flat list of `Source` objects ready for sorting or moving.
 
 ### `testing`
-pytest plugin with the `create_files` fixture: builds a file tree from a nested dict (`None` — empty file, `str`/`bytes` — content, `dict` — folder). Install `justin_utils[testing]` and enable it in the root `conftest.py` with `pytest_plugins = ["justin_utils.testing"]`.
+pytest plugin with the `create_files` fixture: builds a file tree from a nested dict (`None` — empty file, `str`/`bytes` — content, `dict` — folder). Install `justkitten[testing]` and enable it in the root `conftest.py` with `pytest_plugins = ["justkitten.testing"]`.
 
 ### `time_formatter`
 `format_time(delta)` — formats a `timedelta` as a human-readable string (`"X h"`, `"Y m"`, `"Z s"`).

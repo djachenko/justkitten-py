@@ -3,8 +3,8 @@ from pathlib import Path
 import pytest
 from typer.testing import CliRunner
 
-from justin_utils.cd import cd
-from justin_utils.parts import (
+from justkitten.cd import cd
+from justkitten.parts import (
     Part,
     app,
     index_length,

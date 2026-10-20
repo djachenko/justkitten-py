@@ -7,7 +7,7 @@ from PIL import Image as ImageModule
 from PIL import UnidentifiedImageError
 from PIL.ExifTags import IFD, Base
 
-from justin_utils.exif import Exif, PlainContainer, RafContainer, parse_exif
+from justkitten.exif import Exif, PlainContainer, RafContainer, parse_exif
 
 # DateTimeOriginal = 36867, DateTime = 306 (PIL ExifTags)
 _DATE_STR = "2024:03:15 10:30:00"
@@ -58,7 +58,7 @@ def _source(shooting_exif=None):
     image.getexif.return_value = MagicMock(get_ifd=lambda tag: shooting_exif or {})
     image.__enter__.return_value = image
 
-    return patch("justin_utils.exif.ImageModule.open", return_value=image)
+    return patch("justkitten.exif.ImageModule.open", return_value=image)
 
 
 class TestFromPath:
@@ -86,7 +86,7 @@ class TestFromPath:
         OSError("unreadable"),
     ])
     def test_returns_none_when_unreadable(self, image_path, error):
-        with patch("justin_utils.exif.ImageModule.open", side_effect=error):
+        with patch("justkitten.exif.ImageModule.open", side_effect=error):
             assert Exif.from_path(image_path) is None
 
 
@@ -116,7 +116,7 @@ class TestContainers:
         assert container.read(path).getvalue() == payload
 
     def test_unreadable_file_gives_none(self, image_path):
-        with patch("justin_utils.exif.ImageModule.open", side_effect=UnidentifiedImageError("nope")):
+        with patch("justkitten.exif.ImageModule.open", side_effect=UnidentifiedImageError("nope")):
             assert Exif.from_path(image_path) is None
 
     def test_raf_is_selected_for_raf(self, raf_path):

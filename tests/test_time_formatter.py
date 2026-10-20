@@ -2,7 +2,7 @@ from datetime import timedelta
 
 import pytest
 
-from justin_utils.time_formatter import format_time
+from justkitten.time_formatter import format_time
 
 
 class TestFormatTime:

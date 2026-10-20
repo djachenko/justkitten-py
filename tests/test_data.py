@@ -2,7 +2,7 @@ from datetime import timedelta
 
 import pytest
 
-from justin_utils.data import DataSize, DataSpeed
+from justkitten.data import DataSize, DataSpeed
 
 
 class TestDataSizeUnitForValue:

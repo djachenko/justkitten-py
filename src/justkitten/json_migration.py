@@ -6,7 +6,7 @@ if sys.version_info >= (3, 13):
 else:
     from typing_extensions import deprecated
 
-from justin_utils.singleton import Singleton
+from justkitten.singleton import Singleton
 
 Version = int
 JsonObject = dict

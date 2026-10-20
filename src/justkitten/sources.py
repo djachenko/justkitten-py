@@ -4,9 +4,9 @@ from functools import cached_property
 from pathlib import Path
 from typing import ClassVar
 
-from justin_utils import joins, util
-from justin_utils.exif import Exif, parse_exif
-from justin_utils.filesystem import File, Movable
+from justkitten import joins, util
+from justkitten.exif import Exif, parse_exif
+from justkitten.filesystem import File, Movable
 
 
 class Source(Movable):

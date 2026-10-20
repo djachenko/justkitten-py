@@ -1,6 +1,6 @@
 import pytest
 
-from justin_utils.pylinq import Sequence
+from justkitten.pylinq import Sequence
 
 
 class TestConstruction:

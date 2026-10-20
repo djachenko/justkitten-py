@@ -9,7 +9,7 @@ from pathlib import Path
 from types import NoneType, UnionType
 from typing import Annotated, Any, ClassVar, Protocol, Self, TypeVar, Union, get_args, get_origin
 
-log = logging.getLogger("justin_utils.dictable")
+log = logging.getLogger("justkitten.dictable")
 
 Json = None | bool | int | float | str | list["Json"] | dict[str, "Json"]
 

@@ -15,9 +15,9 @@ if sys.version_info >= (3, 13):
 else:
     from typing_extensions import deprecated
 
-from justin_utils.data import DataSize
-from justin_utils.time_formatter import format_time
-from justin_utils.transfer import TransferSpeedMeter, TransferTimeEstimator
+from justkitten.data import DataSize
+from justkitten.time_formatter import format_time
+from justkitten.transfer import TransferSpeedMeter, TransferTimeEstimator
 
 
 def __subfolders(path: Path) -> list[Path]:

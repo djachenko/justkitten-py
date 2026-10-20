@@ -11,7 +11,7 @@ if sys.version_info >= (3, 13):
 else:
     from typing_extensions import deprecated
 
-from justin_utils.util import is_distinct
+from justkitten.util import is_distinct
 
 Context = Any
 

@@ -1,6 +1,6 @@
 import pytest
 
-from justin_utils.singleton import Singleton
+from justkitten.singleton import Singleton
 
 
 class _ConcreteSingleton(Singleton):

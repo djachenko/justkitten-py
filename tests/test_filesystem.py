@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from justin_utils.filesystem import Folder
+from justkitten.filesystem import Folder
 
 FileTree = dict[str, "FileTree | str | None"]
 

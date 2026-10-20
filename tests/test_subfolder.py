@@ -2,8 +2,8 @@ import sys
 
 import pytest
 
-from justin_utils import subfolder
-from justin_utils.cd import cd
+from justkitten import subfolder
+from justkitten.cd import cd
 
 SUBFOLDER_NAME = "archive"
 

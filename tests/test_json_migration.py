@@ -1,6 +1,6 @@
 import pytest
 
-from justin_utils.json_migration import JsonMigration, JsonMigrator
+from justkitten.json_migration import JsonMigration, JsonMigrator
 
 
 class _Migration(JsonMigration):

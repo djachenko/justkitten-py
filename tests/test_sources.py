@@ -2,8 +2,8 @@ from unittest.mock import patch
 
 import pytest
 
-from justin_utils.filesystem import File
-from justin_utils.sources import (
+from justkitten.filesystem import File
+from justkitten.sources import (
     ExternalMetadataSource,
     InternalMetadataSource,
     parse_sources,
@@ -46,7 +46,7 @@ class TestInternalMetadataSource:
         file = _stemmed_file(temp_dir, STEM, ".jpg")
         source = InternalMetadataSource(file)
 
-        with patch("justin_utils.sources.parse_exif") as mock_parse:
+        with patch("justkitten.sources.parse_exif") as mock_parse:
             mock_parse.return_value = "exif-result"
 
             assert source.exif == "exif-result"

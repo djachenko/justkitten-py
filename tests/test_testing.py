@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from justin_utils.testing import CreateFiles
+from justkitten.testing import CreateFiles
 
 
 class TestCreateFiles:
