@@ -3,7 +3,7 @@ from collections.abc import Iterable
 
 import pytest
 
-from justin_utils.cli import Action, App, Command, Parameter
+from justkitten.cli import Action, App, Command, Parameter
 
 
 class _RecordingAction(Action):

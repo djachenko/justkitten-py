@@ -1,6 +1,6 @@
 import pytest
 
-from justin_utils.joins import inner, left, right
+from justkitten.joins import inner, left, right
 
 
 def _eq(a, b) -> bool:

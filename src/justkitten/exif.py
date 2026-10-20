@@ -10,7 +10,7 @@ from PIL import Image as ImageModule
 from PIL.ExifTags import IFD, Base
 from PIL.Image import Image as PilImage
 
-from justin_utils.util import first
+from justkitten.util import first
 
 ImageSource: TypeAlias = Path | IO[bytes]
 

@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from justin_utils.data import DataSize, DataSpeed
+from justkitten.data import DataSize, DataSpeed
 
 
 class TransferSpeedMeter:

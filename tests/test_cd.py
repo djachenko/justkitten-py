@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from justin_utils.cd import cd
+from justkitten.cd import cd
 
 
 class TestCd:

@@ -1,4 +1,4 @@
-# justin_utils — Project Guide
+# justkitten — Project Guide
 
 ## Что это
 
@@ -9,8 +9,8 @@
 ## Место в экосистеме
 
 ```
-justin ──→ justin_utils
-pyvko  ──→ justin_utils (планируется)
+justin ──→ justkitten
+pyvko  ──→ justkitten (планируется)
 ```
 
 Цель: вобрать весь переиспользуемый код из `justin` и `pyvko`, чтобы шарить между проектами без лишних зависимостей.

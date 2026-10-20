@@ -6,7 +6,7 @@ from typing import Annotated, Any
 
 import pytest
 
-from justin_utils.dictable import (
+from justkitten.dictable import (
     Dictable,
     DictableDataclass,
     DictableError,
@@ -429,13 +429,13 @@ class TestOverride:
 
 class TestLogging:
     def test_default_substitution_logs_path(self, caplog):
-        with caplog.at_level("DEBUG", logger="justin_utils.dictable"):
+        with caplog.at_level("DEBUG", logger="justkitten.dictable"):
             Node.from_dict({"title": "t", "leaf": {"name": "l"}})
 
         assert "Node.count" in caplog.text
 
     def test_clean_payload_is_quiet(self, caplog):
-        with caplog.at_level("DEBUG", logger="justin_utils.dictable"):
+        with caplog.at_level("DEBUG", logger="justkitten.dictable"):
             Leaf.from_dict({"name": "l"})
 
         assert caplog.text == ""
