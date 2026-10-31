@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.9.0 (2026-10-31)
+
+### Features
+
+- Added removal to file
+  ([`d1b9289`](https://github.com/djachenko/justkitten-py/commit/d1b9289c499f6c8694d5ab2aa0b0b06bbe5b5ba1))
+
+### Testing
+
+- Added test for file removal
+  ([`af44f71`](https://github.com/djachenko/justkitten-py/commit/af44f71f497bec33101cb17bd050b18b87c6c461))
+
+
 ## v0.8.0 (2026-10-20)
 
 ### Refactoring
