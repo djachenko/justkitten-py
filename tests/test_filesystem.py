@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from justkitten.filesystem import Folder
+from justkitten.filesystem import File, Folder
 
 FileTree = dict[str, "FileTree | str | None"]
 
@@ -66,3 +66,27 @@ class TestMergeInto:
         source.merge_into(target)
 
         assert source.path == target
+
+
+class TestFileRemove:
+    def test_remove_deletes_file(self, temp_dir, create_files):
+        create_files(temp_dir, {"file.txt": "x"})
+        file = File(temp_dir / "file.txt")
+
+        file.remove()
+
+        assert not (temp_dir / "file.txt").exists()
+
+    def test_remove_keeps_siblings(self, temp_dir, create_files):
+        create_files(temp_dir, {"file.txt": "x", "other.txt": "y"})
+        file = File(temp_dir / "file.txt")
+
+        file.remove()
+
+        assert (temp_dir / "other.txt").exists()
+
+    def test_remove_missing_file_raises(self, temp_dir):
+        file = File(temp_dir / "missing.txt")
+
+        with pytest.raises(FileNotFoundError):
+            file.remove()
