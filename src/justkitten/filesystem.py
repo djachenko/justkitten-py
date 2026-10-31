@@ -351,6 +351,9 @@ class File(PathBased):
     def __lt__(self, other: File) -> bool:
         return self.name < other.name
 
+    def remove(self) -> None:
+        self.path.unlink()
+
 
 class Folder(PathBased):
     __FILES_TO_UNLINK: ClassVar[list[str]] = [name.lower() for name in [
